@@ -10,6 +10,7 @@ Vue.use(VueRouter)
  import shopcarcone from '../components/taber/shopcarcone.vue'
  import newListcone from  '../components/newlist/newList.vue'
  import newInfocone from  '../components/newInfo/newInfo.vue'
+ import photosListcone  from  '../components/photos/photosList.vue'
  //创建路由对象
 
  var router =new VueRouter({
@@ -20,7 +21,8 @@ Vue.use(VueRouter)
         {path:'/shopcar',component: shopcarcone},
         {path:'/search',component: searchcone},
         {path:'/home/newList',component:newListcone},
-        {path:'/home/newInfo/:id',component:newInfocone}
+        {path:'/home/newInfo/:id',component:newInfocone},
+        {path:'/home/photosList',component:photosListcone }
      ],
      //用于替换路由的高亮显示
      linkActiveClass:'mui-active'

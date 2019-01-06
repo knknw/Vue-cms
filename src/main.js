@@ -39,7 +39,7 @@ import moment from 'moment'
 
 var vm = new Vue({
     el:'#app',
-    render:c => c(app),
+    render:c => c(app),//将路由对应得模板渲染到页面中
     router : router//挂载路由到vm实例上
 })
 

@@ -1,3 +1,5 @@
+<!--新闻详情页-->
+
 <template>
     <div class="newInfo-comnse" >
         <h4 class="tatles">{{newsinfo.title}}</h4>
