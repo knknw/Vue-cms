@@ -11,7 +11,7 @@
 
         <!-- 内容区域 -->
         <div  class="content" v-html="newsinfo.content"></div>
-        <!-- 发表模块 -->
+        <!-- 发表评论模块 -->
             <!-- 绑定的id是父组件向子组件传值,用于根据id获取那个文章,获取评论列表 -->
         <common-box :id ="this.id"></common-box>
 

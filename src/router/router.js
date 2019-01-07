@@ -11,6 +11,7 @@ Vue.use(VueRouter)
  import newListcone from  '../components/newlist/newList.vue'
  import newInfocone from  '../components/newInfo/newInfo.vue'
  import photosListcone  from  '../components/photos/photosList.vue'
+ import photosInfocone  from  '../components/photos/photosinfo.vue'
  //创建路由对象
 
  var router =new VueRouter({
@@ -22,9 +23,10 @@ Vue.use(VueRouter)
         {path:'/search',component: searchcone},
         {path:'/home/newList',component:newListcone},
         {path:'/home/newInfo/:id',component:newInfocone},
-        {path:'/home/photosList',component:photosListcone }
+        {path:'/home/photosList',component:photosListcone },
+        {path:'/home/photoinfo/:id',component:photosInfocone }
      ],
-     //用于替换路由的高亮显示
+     //用于替换路由router-link的高亮显示 
      linkActiveClass:'mui-active'
 
  })

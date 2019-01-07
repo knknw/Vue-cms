@@ -37,6 +37,11 @@ import moment from 'moment'
   import common from './common/comment.vue'
   Vue.component("common",common)
 
+  //引人缩略图组件
+  import VuePreview from 'vue-preview'
+  Vue.use(VuePreview)
+
+
 var vm = new Vue({
     el:'#app',
     render:c => c(app),//将路由对应得模板渲染到页面中
