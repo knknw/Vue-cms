@@ -40,7 +40,7 @@ export default {
             },
             getThumbs(){
                 this.$http.get("http://www.lovegf.cn:8899/api/getthumimages/" + this.id).then(result => {
-                    console.log(result.body)
+                    //console.log(result.body)
                     if (result.body.status === 0) {
                     // 循环每个图片数据，补全图片的宽和高
                     result.body.message.forEach(item => {

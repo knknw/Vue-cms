@@ -11,8 +11,10 @@
   
     <!-- 顶部Header区域 -->
     <mt-header fixed title="Vue实战经典"></mt-header>
-    <!-- 中间路由router-view区域 -->
-    	
+    <!-- 添加动画 -->
+    <transition>
+       <router-view></router-view>
+    </transition>
   
     <!-- 底部Tabbar区域 -->
     <nav class="mui-bar mui-bar-tab">
@@ -35,10 +37,7 @@
         <span class="mui-tab-label">搜索</span>
       </router-link>
     </nav>
-      <!-- 添加动画 -->
-    <transition>
-       <router-view></router-view>
-    </transition>
+    
     
   </div>
 </template>

@@ -21,6 +21,7 @@
 <script>
 // 1. 导入 公共评论模板 注册子组件
  import commen from '../../common/comment.vue'
+ import { Toast } from 'mint-ui'
 export default {
     data(){
         return{

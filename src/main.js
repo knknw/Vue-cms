@@ -41,7 +41,7 @@ import moment from 'moment'
   import VuePreview from 'vue-preview'
   Vue.use(VuePreview)
 
-
+ 
 var vm = new Vue({
     el:'#app',
     render:c => c(app),//将路由对应得模板渲染到页面中
