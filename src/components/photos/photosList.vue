@@ -46,7 +46,7 @@
         },
          getpotostenf(tid){//图片列表页
         this.$http.get('http://www.lovegf.cn:8899/api/getimages/'+tid).then(result => {
-              console.log(result.body)
+              //console.log(result.body)
               this.list = result.body.message
         })
         },
