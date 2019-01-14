@@ -10,7 +10,14 @@
   
   
     <!-- 顶部Header区域 -->
-    <mt-header fixed title="Vue实战经典"></mt-header>
+    <mt-header fixed title="Vue实战经典">
+        <span 
+      v-show="$route.path !== '/home'" 
+      @click="$router.go(-1)" 
+      slot="left">
+        <mt-button icon="back">返回</mt-button>
+        </span>
+    </mt-header>
     <!-- 添加动画 -->
     <transition>
        <router-view></router-view>
@@ -28,7 +35,7 @@
       </router-link>
       <router-link class="mui-tab-item" to="/shopcar">
         <span class="mui-icon mui-icon-extra mui-icon-extra-cart" id="sdfr"> 
-          <span class="mui-badge">0</span>
+          <span class="mui-badge">{{$store.getters.gettoallcoente }}</span>
         </span>
         <span class="mui-tab-label">购物车</span>
       </router-link>

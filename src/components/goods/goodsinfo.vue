@@ -77,7 +77,7 @@ export default {
             return{
                id:this.$route.params.id,
                lunboList:[],
-                list:[],
+                list:{},
                 coente:1,
                 ballflg : false
             }
@@ -109,11 +109,24 @@ export default {
                //使用编程式导航
                 this.$router.push('/home/getcomnt/'+id)
            },
+           //添加到购物车
           addshopcar(){
                //console.log(1223)
                this.ballflg = !this.ballflg
-              let coente = this.coente
-               this.$store.commit('addtocar',coente)
+               //将商品信息添加到购物车
+               //{id:"商品id", coente:'要购买的数量',price:'商品单价,selected: false 是否添加到结算}
+               let goodinfo ={
+                   id:this.id,
+                   coente:this.coente,
+                   price:this.list.sell_price,
+                   stock_quantity:this.list.stock_quantity,
+                   selected:true,
+                   
+               }
+               //将购物车的商品信息都通过mutations传递给vuex储存全局数据
+               this.$store.commit("addtocar",goodinfo)
+            //   let coente = this.coente
+            //    this.$store.commit('addtocar',coente)
                  
            },
            //小球动画的钩子函数
